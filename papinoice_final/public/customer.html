@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Papinoice | Kanchipuram</title>
+
+<style>
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    min-height: 90px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 6%;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 480px;
+    max-width: 45vw;
+    height: 95px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e91e63;
+}
+
+.login-btn {
+    background: #e91e63;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.login-btn:hover {
+    background: #c91852;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8fbd,
+            #ff4f91,
+            #e91e63
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-image {
+    width: 280px;
+    max-width: 80%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    border-radius: 140px;
+}
+
+.hero h1 {
+    color: white;
+
+    font-size: 60px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    background: white;
+    color: #e91e63;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #fff0f6;
+}
+
+
+/* ================= SECTION ================= */
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 45px;
+
+    color: #e91e63;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: #fff;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* ================= FLAVOURS ================= */
+
+.flavours-section {
+    background: #fff5f9;
+}
+
+.flavour-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.flavour-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.flavour-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.12);
+}
+
+.flavour-image {
+    width: 100%;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #f5f5f5;
+}
+
+.flavour-name {
+    padding: 18px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #ffe3ef;
+
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px 0;
+
+    font-size: 18px;
+}
+
+.contact a {
+    color: #e91e63;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    width: 80px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    border-radius: 140px;
+}
+
+footer p {
+    margin: 8px;
+
+    color: #ddd;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    background: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.2);
+
+    z-index: 2000;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width: 1200px) {
+
+    .logo {
+        width: 350px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .flavour-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .logo {
+        width: 350px;
+        max-width: 80vw;
+        height: 80px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .flavour-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width: 500px) {
+
+    .logo {
+        width: 280px;
+        max-width: 90vw;
+        height: 70px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+
+        padding: 10px 14px;
+    }
+
+    .flavour-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding:
+            50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .flavour-image {
+        height: 100px;
+        
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <img
+        src="/35785677-5999-4581-B59D-3C36D58ADD30.jpeg"
+        class="logo"
+        alt="Papinoice"
+    >
+
+    <nav>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+        <a href="#flavours">
+            Our Flavours
+        </a>
+
+        <a href="#contact">
+            Contact Us
+        </a>
+
+    </nav>
+
+    <a
+        href="/login.html"
+        class="login-btn"
+    >
+        ADMIN / STAFF LOGIN
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <img
+            src="/Image.jpg"
+            class="hero-image"
+            alt="Papinoice"
+        >
+
+        <h1>
+            Freeze Your Moments
+        </h1>
+
+        <p>
+            Real Taste of Nature
+        </p>
+
+        <a
+            href="#flavours"
+            class="hero-btn"
+        >
+            Explore Our Flavours
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <h2 class="section-title">
+        About Papinoice
+    </h2>
+
+    <div class="about-content">
+
+        <p>
+            Welcome to Papinoice Kanchipuram.
+            We serve delicious 100% vegetarian
+            stick ice creams made with natural
+            fruits and quality ingredients.
+        </p>
+
+        <br>
+
+        <p>
+            With more than 30 delicious flavours,
+            Papinoice is perfect for families,
+            celebrations, birthdays, weddings,
+            parties and special occasions.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FLAVOURS ================= -->
+
+<section
+    class="flavours-section"
+    id="flavours"
+>
+
+    <h2 class="section-title">
+        Our Flavours
+    </h2>
+
+    <div
+        class="flavour-grid"
+        id="flavourGrid"
+    ></div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <h2 class="section-title">
+        Contact Us
+    </h2>
+
+    <p>
+        📍 No. 2 Palla Street,
+        Nathapettai,
+        Kanchipuram,
+        Tamil Nadu
+    </p>
+
+    <p>
+        📞
+        <a href="tel:9944164465">
+            9944164465
+        </a>
+    </p>
+
+    <p>
+        📞
+        <a href="tel:9790880749">
+            9790880749
+        </a>
+    </p>
+
+    <p>
+        ✉️
+        <a href="mailto:papinoice21@gmail.com">
+            papinoice21@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📷
+        <a
+            href="https://www.instagram.com/Papino_ice_kanchi"
+            target="_blank"
+            rel="noopener"
+        >
+            @Papino_ice_kanchi
+        </a>
+    </p>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <img
+        src="/Image.jpg"
+        class="footer-logo"
+        alt="Papinoice"
+    >
+
+    <p>
+        <strong>
+            Papinoice
+        </strong>
+    </p>
+
+    <p>
+        Real Fruits. Real Happiness.
+    </p>
+
+    <p>
+        © 2026 Papinoice Kanchipuram.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919944164465"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Papinoice on WhatsApp"
+>
+    📞
+</a>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ==========================================
+       PAPINOICE FLAVOURS
+       ========================================== */
+
+    const flavours = [
+
+        ["Kit Kat", "kitkat.png"],
+        ["Rose Milk", "rose-milk.jpg"],
+        ["Tender Coconut", "tender-coconut.jpg"],
+        ["Butter Scotch", "butter-scotch.jpg"],
+        ["Lotus Biscoff", "lotus-biscoff.jpg"],
+        ["Chocolate", "chocolate.jpg"],
+        ["Spanish Delight", "spanish-delight.jpg"],
+        ["Mango", "mango.jpg"],
+        ["Blueberry", "blueberry.jpg"],
+        ["Dry Fruit", "dry-fruit.jpg"],
+        ["Milo", "milo.jpg"],
+        ["Horlicks", "horlicks.jpg"],
+        ["Custard Apple", "custard-apple.jpg"],
+        ["Avocado", "avocado.jpg"],
+        ["Mixed Fruit", "mixed-fruit.jpg"],
+        ["Black Currant", "black-currant.jpg"],
+        ["Fig & Honey", "fig-honey.jpg"],
+        ["Sapota", "sapota.jpg"],
+        ["Strawberry", "strawberry.jpg"],
+        ["Jack Fruit", "jack-fruit.jpg"],
+        ["Pista", "pista.jpg"],
+        ["Malai", "malai.jpg"],
+        ["Cold Coffee", "cold-coffee.jpg"],
+        ["Semiya", "semiya.jpg"],
+        ["Oreo", "oreo.jpg"],
+        ["Guava", "guava.jpg"],
+        ["Vanilla", "vanilla.jpg"],
+        ["Grape Semiya", "grape-semiya.jpg"],
+        ["Avo Mango", "avo-mango.jpg"],
+        ["Nutella", "nutella.jpg"],
+        ["Snicky Pop", "snicky-pop.jpg"],
+        ["Grape", "grape.jpg"],
+        ["Green Apple", "green-apple.jpg"],
+        ["Pineapple", "pineapple.jpg"],
+        ["Orange", "orange.jpg"],
+        ["Watermelon", "watermelon.jpg"],
+        ["Litchi", "litchi.jpg"]
+
+    ];
+
+
+    /* ==========================================
+       FIND FLAVOUR GRID
+       ========================================== */
+
+    const flavourGrid =
+        document.getElementById("flavourGrid");
+
+
+    if (!flavourGrid) {
+
+        console.error(
+            "ERROR: flavourGrid not found!"
+        );
+
+        return;
+    }
+
+
+    /* ==========================================
+       CREATE FLAVOUR CARDS
+       ========================================== */
+
+    flavours.forEach(function ([name, image]) {
+
+
+        /* CREATE CARD */
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "flavour-card";
+
+
+        /* CREATE IMAGE */
+
+        const img =
+            document.createElement("img");
+
+        img.className =
+            "flavour-image";
+
+        img.alt = name;
+
+        img.loading = "lazy";
+
+
+        /*
+         * IMPORTANT
+         *
+         * Your flavour images should be here:
+         *
+         * public/images/
+         *
+         * Example:
+         *
+         * public/images/rose-milk.jpg
+         *
+         * Browser URL:
+         *
+         * /images/rose-milk.jpg
+         */
+
+        img.src =
+            "/images/" + image;
+
+
+        /* IMAGE ERROR HANDLING */
+
+        img.onerror = function () {
+
+            console.error(
+                "Flavour image not found:",
+                this.src
+            );
+
+            /*
+             * Try alternative folder:
+             *
+             * /images/flavours/
+             *
+             */
+
+            if (
+                !this.dataset.triedFlavoursFolder
+            ) {
+
+                this.dataset.triedFlavoursFolder =
+                    "true";
+
+                this.src =
+                    "/images/flavours/" + image;
+
+                return;
+            }
+
+
+            /*
+             * If both locations fail,
+             * use Papinoice default image.
+             */
+
+            this.onerror = null;
+
+            this.src =
+                "/Image.jpg";
+        };
+
+
+        /* CREATE NAME */
+
+        const title =
+            document.createElement("div");
+
+        title.className =
+            "flavour-name";
+
+        title.textContent =
+            name;
+
+
+        /* ADD IMAGE */
+
+        card.appendChild(img);
+
+
+        /* ADD NAME */
+
+        card.appendChild(title);
+
+
+        /* ADD CARD */
+
+        flavourGrid.appendChild(card);
+
+    });
+
+
+    /* ==========================================
+       CONSOLE MESSAGE
+       ========================================== */
+
+    console.log(
+        "Papinoice flavours loaded:",
+        flavours.length
+    );
+
+});
+
+</script>
+
+</body>
+</html>
