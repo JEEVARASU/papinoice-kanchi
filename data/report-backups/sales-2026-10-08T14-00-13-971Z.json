@@ -1,0 +1,38 @@
+[
+  {
+    "id": "8b1d35b8-be04-4b84-8b6c-77a970f44a8a",
+    "billNo": "PAP-20261008-0001",
+    "time": "2026-10-08T13:58:43.554Z",
+    "staff": "Jeevarasu",
+    "payment": "Cash",
+    "discount": 0,
+    "total": 140,
+    "items": [
+      {
+        "productId": "P001",
+        "name": "Kit Kat",
+        "price": 35,
+        "qty": 4,
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "9c3e072c-f257-457a-ad83-1cb29b390b36",
+    "billNo": "PAP-20261008-0002",
+    "time": "2026-10-08T13:59:11.768Z",
+    "staff": "Jeevarasu",
+    "payment": "Cash",
+    "discount": 0,
+    "total": 105,
+    "items": [
+      {
+        "productId": "P001",
+        "name": "Kit Kat",
+        "price": 35,
+        "qty": 3,
+        "line": 105
+      }
+    ]
+  }
+]

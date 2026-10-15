@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reports · Papinoice</title>
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+.report-actions{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.reset-btn{
+    background:#dc3545;
+    color:white;
+    border:0;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.reset-btn:hover{
+    opacity:.9;
+}
+
+.report-table-wrap{
+    overflow-x:auto;
+    margin-top:20px;
+}
+
+.report-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.report-table th,
+.report-table td{
+    padding:13px 14px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+}
+
+.report-table th{
+    font-weight:600;
+}
+
+.report-table td:last-child,
+.report-table th:last-child{
+    text-align:right;
+}
+
+.report-table .total{
+    font-weight:700;
+}
+
+.empty-report{
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:700px){
+    .report-table{
+        min-width:750px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<script src="/js/common.js"></script>
+
+<script>
+
+layout('reports').then(async()=>{
+
+    page.innerHTML=`
+
+        <div class="title-row">
+            <div class="title">
+                <h1>Reports</h1>
+                <p>Date-wise sales report</p>
+            </div>
+
+            <div class="report-actions" id="adminActions"></div>
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <div class="big" id="totalSales">₹0</div>
+            </div>
+
+            <div class="card">
+                <h3>Total Bills</h3>
+                <div class="big" id="totalBills">0</div>
+            </div>
+
+            <div class="card">
+                <h3>Sticks Sold</h3>
+                <div class="big" id="totalSticks">0</div>
+            </div>
+
+            <div class="card">
+                <h3>Cash</h3>
+                <div class="big" id="totalCash">₹0</div>
+            </div>
+
+            <div class="card">
+                <h3>UPI</h3>
+                <div class="big" id="totalUPI">₹0</div>
+            </div>
+
+            <div class="card">
+                <h3>Card</h3>
+                <div class="big" id="totalCard">₹0</div>
+            </div>
+
+        </div>
+
+
+        <!-- DATE-WISE REPORT -->
+
+        <div class="panel">
+
+            <div class="title-row">
+                <div class="title">
+                    <h2>Date-wise Sales</h2>
+                    <p>Daily sales and payment summary</p>
+                </div>
+            </div>
+
+            <div class="report-table-wrap">
+
+                <table class="report-table">
+
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Bills</th>
+                            <th>Sticks Sold</th>
+                            <th>Cash</th>
+                            <th>UPI</th>
+                            <th>Card</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportBody">
+                        <tr>
+                            <td colspan="7" class="empty-report">
+                                Loading reports...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    `;
+
+
+    /* CHECK USER ROLE */
+
+    const me=await api('/me');
+
+    if(me.user && me.user.role==='Admin'){
+
+        document.getElementById('adminActions').innerHTML=`
+
+            <button
+                class="reset-btn"
+                onclick="resetReports()">
+                Reset Reports
+            </button>
+
+        `;
+    }
+
+
+    /* LOAD REPORTS */
+
+    const report=await api('/reports/daily');
+
+    const body=document.getElementById('reportBody');
+
+    if(!report || !report.length){
+
+        body.innerHTML=`
+            <tr>
+                <td colspan="7" class="empty-report">
+                    No sales reports available
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+
+    /* TOTALS */
+
+    let totalSales=0;
+    let totalBills=0;
+    let totalSticks=0;
+    let totalCash=0;
+    let totalUPI=0;
+    let totalCard=0;
+
+
+    body.innerHTML=report.map(r=>{
+
+        totalSales+=Number(r.sales||0);
+        totalBills+=Number(r.bills||0);
+        totalSticks+=Number(r.sticks||0);
+        totalCash+=Number(r.cash||0);
+        totalUPI+=Number(r.upi||0);
+        totalCard+=Number(r.card||0);
+
+
+        const date=new Date(
+            r.date+'T00:00:00'
+        ).toLocaleDateString(
+            'en-IN',
+            {
+                day:'2-digit',
+                month:'2-digit',
+                year:'numeric'
+            }
+        );
+
+
+        return `
+
+            <tr>
+
+                <td>${date}</td>
+
+                <td>${r.bills}</td>
+
+                <td>${r.sticks}</td>
+
+                <td>${money(r.cash)}</td>
+
+                <td>${money(r.upi)}</td>
+
+                <td>${money(r.card)}</td>
+
+                <td class="total">
+                    ${money(r.sales)}
+                </td>
+
+            </tr>
+
+        `;
+
+    }).join('');
+
+
+    /* DISPLAY TOTALS */
+
+    document.getElementById('totalSales').textContent=
+        money(totalSales);
+
+    document.getElementById('totalBills').textContent=
+        totalBills;
+
+    document.getElementById('totalSticks').textContent=
+        totalSticks;
+
+    document.getElementById('totalCash').textContent=
+        money(totalCash);
+
+    document.getElementById('totalUPI').textContent=
+        money(totalUPI);
+
+    document.getElementById('totalCard').textContent=
+        money(totalCard);
+
+});
+
+
+/* =====================================================
+   RESET REPORTS - ADMIN ONLY
+   ===================================================== */
+
+async function resetReports(){
+
+    const first=confirm(
+        'Are you sure you want to reset all sales reports?'
+    );
+
+    if(!first) return;
+
+
+    const second=confirm(
+        'This will clear the current reports. A backup will be created. Continue?'
+    );
+
+    if(!second) return;
+
+
+    try{
+
+        const result=await api(
+            '/reports/reset',
+            {
+                method:'POST'
+            }
+        );
+
+
+        alert(
+            result.message ||
+            'Reports reset successfully'
+        );
+
+
+        location.reload();
+
+
+    }catch(error){
+
+        alert(
+            error.message ||
+            'Unable to reset reports'
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

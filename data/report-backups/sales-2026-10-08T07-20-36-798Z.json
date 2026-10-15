@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cf162e1f-5f02-40dc-8caa-6d7383e76976",
+    "billNo": "PAP-20261008-0001",
+    "time": "2026-10-08T07:19:21.106Z",
+    "staff": "Jeevarasu",
+    "payment": "Cash",
+    "discount": 0,
+    "total": 280,
+    "items": [
+      {
+        "productId": "P001",
+        "name": "Kit Kat",
+        "price": 35,
+        "qty": 8,
+        "line": 280
+      }
+    ]
+  }
+]
