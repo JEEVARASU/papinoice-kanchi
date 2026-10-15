@@ -1,0 +1,494 @@
+{
+  "users": [
+    {
+      "id": "U001",
+      "username": "Jeeva",
+      "password": "Jeeva@1005",
+      "name": "Jeevarasu",
+      "role": "Admin"
+    },
+    {
+      "id": "U002",
+      "username": "Kavi",
+      "password": "kavi@2007",
+      "name": "kaviyarasu.v",
+      "role": "Billing Staff"
+    },
+    {
+      "id": "U003",
+      "username": "stock",
+      "password": "stock123",
+      "name": "Stock Staff",
+      "role": "Stock Staff"
+    }
+  ],
+  "products": [
+    {
+      "id": "P001",
+      "name": "Kit Kat",
+      "price": 35,
+      "stock": 74,
+      "minStock": 10,
+      "emoji": "🍫",
+      "bg": "brown"
+    },
+    {
+      "id": "P002",
+      "name": "Rose Milk",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🌹",
+      "bg": "pink"
+    },
+    {
+      "id": "P003",
+      "name": "Tender Coconut",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥥",
+      "bg": "green"
+    },
+    {
+      "id": "P004",
+      "name": "Butter Scotch",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍮",
+      "bg": "yellow"
+    },
+    {
+      "id": "P005",
+      "name": "Lotus Biscoff",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍪",
+      "bg": "brown"
+    },
+    {
+      "id": "P006",
+      "name": "Chocolate",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍫",
+      "bg": "brown"
+    },
+    {
+      "id": "P007",
+      "name": "Spanish Delight",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍦",
+      "bg": "pink"
+    },
+    {
+      "id": "P008",
+      "name": "Mango",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥭",
+      "bg": "yellow"
+    },
+    {
+      "id": "P009",
+      "name": "Blueberry",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🫐",
+      "bg": "blue"
+    },
+    {
+      "id": "P010",
+      "name": "Dry Fruit",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥜",
+      "bg": "brown"
+    },
+    {
+      "id": "P011",
+      "name": "Milo",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥛",
+      "bg": "brown"
+    },
+    {
+      "id": "P012",
+      "name": "Horlicks",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥛",
+      "bg": "yellow"
+    },
+    {
+      "id": "P013",
+      "name": "Custard Apple",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍏",
+      "bg": "green"
+    },
+    {
+      "id": "P014",
+      "name": "Avocado",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥑",
+      "bg": "green"
+    },
+    {
+      "id": "P015",
+      "name": "Mixed Fruit",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍓",
+      "bg": "pink"
+    },
+    {
+      "id": "P016",
+      "name": "Black Currant",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🫐",
+      "bg": "purple"
+    },
+    {
+      "id": "P017",
+      "name": "Fig & Honey",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍯",
+      "bg": "yellow"
+    },
+    {
+      "id": "P018",
+      "name": "Sapota",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍈",
+      "bg": "brown"
+    },
+    {
+      "id": "P019",
+      "name": "Strawberry",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍓",
+      "bg": "pink"
+    },
+    {
+      "id": "P020",
+      "name": "Jack Fruit",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍈",
+      "bg": "yellow"
+    },
+    {
+      "id": "P021",
+      "name": "Pista",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥜",
+      "bg": "green"
+    },
+    {
+      "id": "P022",
+      "name": "Malai",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍦",
+      "bg": "white"
+    },
+    {
+      "id": "P023",
+      "name": "Cold Coffee",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "☕",
+      "bg": "brown"
+    },
+    {
+      "id": "P024",
+      "name": "Semiya",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍨",
+      "bg": "yellow"
+    },
+    {
+      "id": "P025",
+      "name": "Oreo",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍪",
+      "bg": "black"
+    },
+    {
+      "id": "P026",
+      "name": "Guava",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍐",
+      "bg": "green"
+    },
+    {
+      "id": "P027",
+      "name": "Vanilla",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍦",
+      "bg": "white"
+    },
+    {
+      "id": "P028",
+      "name": "Grape Semiya",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍇",
+      "bg": "purple"
+    },
+    {
+      "id": "P029",
+      "name": "Avo Mango",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🥭",
+      "bg": "green"
+    },
+    {
+      "id": "P030",
+      "name": "Nutella",
+      "price": 35,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍫",
+      "bg": "brown"
+    },
+    {
+      "id": "P031",
+      "name": "Snicky Pop",
+      "price": 50,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍫",
+      "bg": "yellow"
+    },
+    {
+      "id": "P032",
+      "name": "Grape",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍇",
+      "bg": "purple"
+    },
+    {
+      "id": "P033",
+      "name": "Green Apple",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍏",
+      "bg": "green"
+    },
+    {
+      "id": "P034",
+      "name": "Pineapple",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍍",
+      "bg": "yellow"
+    },
+    {
+      "id": "P035",
+      "name": "Orange",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍊",
+      "bg": "orange"
+    },
+    {
+      "id": "P036",
+      "name": "Watermelon",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍉",
+      "bg": "green"
+    },
+    {
+      "id": "P037",
+      "name": "Litchi",
+      "price": 25,
+      "stock": 0,
+      "minStock": 10,
+      "emoji": "🍒",
+      "bg": "pink"
+    }
+  ],
+  "sales": [
+    {
+      "id": "eb6ca7fd-7203-4420-8145-48bf111b5663",
+      "billNo": "PAP-20261008-0001",
+      "time": "2026-10-08T14:28:01.504Z",
+      "staff": "Jeevarasu",
+      "payment": "UPI",
+      "discount": 0,
+      "total": 245,
+      "items": [
+        {
+          "productId": "P001",
+          "name": "Kit Kat",
+          "price": 35,
+          "qty": 7,
+          "line": 245
+        }
+      ]
+    }
+  ],
+  "movements": [
+    {
+      "time": "2026-10-07T07:38:56.219Z",
+      "type": "STOCK IN",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": 24,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T07:39:03.980Z",
+      "type": "DAMAGE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -8,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T07:39:16.627Z",
+      "type": "DAMAGE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -62,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T07:39:42.658Z",
+      "type": "STOCK IN",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": 48,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T07:39:48.356Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -2,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T07:40:14.141Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -1,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T08:47:23.401Z",
+      "type": "STOCK IN",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": 24,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T08:47:31.359Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -4,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-07T15:23:57.888Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -5,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-08T07:19:21.105Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -8,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-08T13:58:43.554Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -4,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-08T13:59:11.768Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -3,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-08T14:00:49.395Z",
+      "type": "STOCK IN",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": 81,
+      "staff": "Jeevarasu"
+    },
+    {
+      "time": "2026-10-08T14:28:01.504Z",
+      "type": "SALE",
+      "productId": "P001",
+      "product": "Kit Kat",
+      "qty": -7,
+      "staff": "Jeevarasu"
+    }
+  ]
+}

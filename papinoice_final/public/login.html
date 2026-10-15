@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Papinoice Login</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="login" style="
+
+            background: url(/public/css/35785677-5999-4581-B59D-3C36D58ADD30.jpeg);
+            
+            ">
+            <form class="loginbox" id="f"><div class="logo">🍦 Papinoice</div><h1>Welcome back</h1><p class="muted">Billing & Inventory Management</p><input id="u" placeholder="Username" value="admin"><input id="p" type="password" placeholder="Password" value="admin123"><div id="e" class="error"></div><button class="btn primary" type="submit">Sign in</button><p class="muted" style="font-size:12px;margin-top:18px">Admin: admin / admin123</p></form></div><script src="/js/common.js"></script><script>f.onsubmit=async e=>{e.preventDefault();try{const x=await api('/login',{method:'POST',body:JSON.stringify({username:u.value,password:p.value})});localStorage.setItem('papinoice_token',x.token);location.href='/dashboard.html'}catch(x){document.getElementById('e').textContent=x.message}}</script></body></html>
